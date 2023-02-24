@@ -2,6 +2,7 @@ from cmath import log
 from distutils.sysconfig import PREFIX
 import discord
 from dotenv import load_dotenv
+from discord.ext import commands
 import os
 load_dotenv()
 
@@ -21,10 +22,16 @@ async def on_message(message):
 
     if message.content == f'{PREFIX}call':
         await message.channel.send("callback!")
+        
+            if message.content == f'{PREFIX}embed':
+        embed=discord.Embed(title="embed messege test", description="hello world")
+        embed.add_field(name="undefined", value="undefined", inline=False)
+        await ctx.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('Hello!')
-
+    @commands.command(pass_context=True)
+    async def hug(self, ctx):
+        await self.bot.say("hello, {}!".format(ctx.message.author.mention))
 
 try:
     client.run(TOKEN)
