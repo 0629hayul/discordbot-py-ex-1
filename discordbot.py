@@ -24,9 +24,9 @@ async def on_message(message):
         await message.channel.send("callback!")
         
     if message.content == f'{PREFIX}embed':
-        embed=discord.Embed(title="embed messege test", description="hello world")
-        embed.add_field(name="undefined", value="undefined", inline=False)
-        await ctx.send(embed=embed)
+    embed=discord.Embed(title="embed messege test", description="hello world")
+    embed.add_field(name="undefined", value="undefined", inline=False)
+    await ctx.send(embed=embed)
 
     if message.content.startswith(f'{PREFIX}hello'):
       @commands.command(pass_context=True)
