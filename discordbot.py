@@ -24,9 +24,9 @@ async def on_message(message):
         await message.channel.send("callback!")
 
     if message.content.startswith(f'{PREFIX}hello'):
-      @commands.command(pass_context=True)
-      async def hug(self, ctx):
-      await self.bot.say("hello, {}!".format(ctx.message.author.mention))
+        @commands.command(pass_context=True)
+        async def hug(self, ctx):
+        await self.bot.say("hello, {}!".format(ctx.message.author.mention))
 
 try:
     client.run(TOKEN)
