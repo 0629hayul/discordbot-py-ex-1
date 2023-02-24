@@ -24,7 +24,7 @@ async def on_message(message):
         await message.channel.send("callback!")
 
     if message.content.startswith(f'{PREFIX}hello'):
-        await message.send('{0.author.mention} Hello!'.format(ctx))
+        await message.send('{0.author.mention} Hello!'.format(message))
 
     if message.content == f'{PREFIX}embed':
         embed=discord.Embed()
