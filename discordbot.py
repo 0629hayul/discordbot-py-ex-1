@@ -56,7 +56,6 @@ async def on_member_join(member):
         print("Couldn't message " + member.name)
     embed=discord.Embed(
         title="Welcome "+member.name+"!"
-        color=discord.Color.green()
     )
         
     role = discord.utils.get(member.server.roles, name="name-of-your-role") #  Gets the member role as a `role` object
