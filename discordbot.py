@@ -34,19 +34,6 @@ async def on_message(message):
         embedVar.add_field(name="Field2", value="hi2", inline=False)
         await message.channel.send(embed=embedVar)
         
-    if message.content.startswith(f'{PREFIX}profile'):
-		if (args[0]) {
-			const user = getUserFromMention(args[0]);
-			if (!user) {
-				return message.reply('Please use a proper mention if you want to see someone elses avatar.');
-			}
-
-			return message.channel.send(`${user.username}'s avatar: ${user.displayAvatarURL({ dynamic: true })}`);
-		}
-
-		return message.channel.send(`${message.author.username}, your avatar: ${message.author.displayAvatarURL({ dynamic: true })}`);
-	}
-});
             
 try:
     client.run(TOKEN)
