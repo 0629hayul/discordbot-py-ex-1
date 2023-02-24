@@ -29,9 +29,9 @@ async def on_message(message):
         await message.send('{0.author.mention} Hello!'.format(message))
 
     if message.content == f'{PREFIX}help':
-        embedVar = discord.Embed(title="Title", description="Desc", color=0x00ff00)
-        embedVar.add_field(name="Field1", value="hi", inline=False)
-        embedVar.add_field(name="Field2", value="hi2", inline=False)
+        embedVar = discord.Embed(title="Telum_bot", color=0x3B3B3B)
+        embedVar.add_field(value="hi", inline=False)
+        embedVar.add_field(value="hi2", inline=False)
         await message.channel.send(embed=embedVar)
         
             
