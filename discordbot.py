@@ -30,8 +30,10 @@ async def on_message(message):
 
     if message.content == f'{PREFIX}help':
         embedVar = discord.Embed(title="Telum_bot", color=0x3B3B3B)
-        embedVar.add_field(name="",value="hi", inline=False)
-        embedVar.add_field(name="",value="hi2", inline=False)
+        embedVar.add_field(name="*접두사 : .",value="- .help : telum 봇 명령어 확인", inline=False)
+        embedVar.add_field(name="",value="- .hi : 인사", inline=False)
+        embedVar.add_field(name="",value="- .hello : 멘션 기능 구현중", inline=False)
+        embedVar.add_field(name="",value="- call : (접두사X)봇 확인", inline=False)
         await message.channel.send(embed=embedVar)
         
             
