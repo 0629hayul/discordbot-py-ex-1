@@ -26,8 +26,7 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
     if message.content == f'{PREFIX}embed':
-        embed=discord.Embed(title="embed messege test", description="hello world")
-        embed.add_field(name="undefined", value="undefined", inline=False)
+        embed = discord.Embed(title="title", description='description', color=discord.Color.green())
         await ctx.send(embed=embed)
     
 try:
