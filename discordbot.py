@@ -24,11 +24,12 @@ async def on_message(message):
         await message.channel.send("callback!")
 
     if message.content.startswith(f'{PREFIX}hello'):
-        await ctx.send('{0.author.mention} Hello!'.format(ctx))
+        await message.send('{0.author.mention} Hello!'.format(ctx))
 
     if message.content == f'{PREFIX}embed':
-        embed=discord.Embed(title="Sample Embed", url="https://realdrewdata.medium.com/", description="This is an embed that will show how to build an embed and the different components")
-        await ctx.send(embed=embed)
+        embed=discord.Embed()
+        embed.add_field(name="undefined", value="undefined", inline=False)
+        await message.send(embed=embed)
     
 try:
     client.run(TOKEN)
