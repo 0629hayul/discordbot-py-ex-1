@@ -56,7 +56,6 @@ async def on_member_join(member):
         print("Couldn't message " + member.name)
     embed=discord.Embed(
         title="Welcome "+member.name+"!"
-        description="We're so glad you're here!"
         color=discord.Color.green()
     )
         
