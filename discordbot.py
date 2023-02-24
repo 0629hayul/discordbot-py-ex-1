@@ -26,7 +26,7 @@ async def on_message(message):
         await message.channel.send("callback!")
 
     if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('{0.author.mention} Hello!'.format(message))
+        await message.channel.send('hello, {0.author.mention}!'.format(message))
 
     if message.content == f'{PREFIX}help':
         embedVar = discord.Embed(title="Telum_bot", color=0x3B3B3B)
