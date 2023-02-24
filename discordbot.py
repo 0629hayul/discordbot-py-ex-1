@@ -26,11 +26,11 @@ async def on_message(message):
         await message.channel.send("callback!")
 
     if message.content.startswith(f'{PREFIX}hello'):
-        await message.send('{0.author.mention} Hello!'.format(message))
+        await message.channel.send('{0.author.mention} Hello!'.format(message))
 
     if message.content == f'{PREFIX}help':
         embedVar = discord.Embed(title="Telum_bot", color=0x3B3B3B)
-        embedVar.add_field(name="*접두사 : .",value="- .help : telum 봇 명령어 확인", inline=False)
+        embedVar.add_field(name="*접두사 :ㅤ.",value="- .help : telum 봇 명령어 확인", inline=False)
         embedVar.add_field(name="",value="- .hi : 인사", inline=False)
         embedVar.add_field(name="",value="- .hello : 멘션 기능 구현중", inline=False)
         embedVar.add_field(name="",value="- call : (접두사X)봇 확인", inline=False)
