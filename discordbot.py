@@ -25,7 +25,11 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}hello'):
         await message.channel.send('Hello!')
 
-
+  if message.content == f'{PREFIX}embed':
+    embed=discord.Embed(title="embed messege test", description="hello world")
+    embed.add_field(name="undefined", value="undefined", inline=False)
+    await ctx.send(embed=embed)
+    
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
