@@ -2,7 +2,6 @@ from cmath import log
 from distutils.sysconfig import PREFIX
 import discord
 from dotenv import load_dotenv
-from discord.ext import commands
 import os
 load_dotenv()
 
@@ -24,11 +23,10 @@ async def on_message(message):
         await message.channel.send("callback!")
 
     if message.content.startswith(f'{PREFIX}hello'):
-        @commands.command(pass_context=True)
-        async def hug(self, ctx):
-        await self.bot.say("hello, {}!".format(ctx.message.author.mention))
+        await message.channel.send('Hello!')
+
 
 try:
     client.run(TOKEN)
-    except discord.errors.LoginFailure as e:
+except discord.errors.LoginFailure as e:
     print("Improper token has been passed.")
