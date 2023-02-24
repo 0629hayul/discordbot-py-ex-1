@@ -24,7 +24,7 @@ async def on_message(message):
         await message.channel.send("callback!")
     
     if message.content == f'test':
-        await message.channel.send('{#1077856697525219381}')
+        await message.channel.send('<#1077856697525219381>')
 
     if message.content.startswith(f'{PREFIX}hello'):
         await message.channel.send('hello, {0.author.mention}!'.format(message))
