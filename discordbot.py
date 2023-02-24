@@ -30,8 +30,8 @@ async def on_message(message):
 
     if message.content == f'{PREFIX}help':
         embedVar = discord.Embed(title="Telum_bot", color=0x3B3B3B)
-        embedVar.add_field(value="hi", inline=False)
-        embedVar.add_field(value="hi2", inline=False)
+        embedVar.add_field(name="",value="hi", inline=False)
+        embedVar.add_field(name="",value="hi2", inline=False)
         await message.channel.send(embed=embedVar)
         
             
