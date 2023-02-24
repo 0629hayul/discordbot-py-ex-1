@@ -29,11 +29,11 @@ async def on_message(message):
         await message.send('{0.author.mention} Hello!'.format(message))
 
     if message.content == f'{PREFIX}help':
-            embedVar = discord.Embed(title="telum-명령어", description="* 접두사:`(따옴표X)")
-        embedVar.add_field(value="call : 봇 실행 여부 확인", inline=False)
-        embedVar.add_field(value="`help : 기본 명령어 확인", inline=False)
-        embedVar.add_field(value="`hi : 인사", inline=False)
-        embedVar.add_field(value="`hello : 멘션 기능 구현중", inline=False)
+	embedVar = discord.Embed(title="telum-명령어", description="* 접두사:`(따옴표X)")
+	embedVar.add_field(value="call : 봇 실행 여부 확인", inline=False)
+	embedVar.add_field(value="`help : 기본 명령어 확인", inline=False)
+	embedVar.add_field(value="`hi : 인사", inline=False)
+	embedVar.add_field(value="`hello : 멘션 기능 구현중", inline=False)
 
         await message.channel.send(embed=embedVar)
         
