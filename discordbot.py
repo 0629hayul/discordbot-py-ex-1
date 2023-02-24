@@ -26,10 +26,11 @@ async def on_message(message):
     if message.content.startswith(f'{PREFIX}hello'):
         await message.send('{0.author.mention} Hello!'.format(message))
 
-    if message.content == f'{PREFIX}embed':
-        embed=discord.Embed()
-        embed.add_field(name="undefined", value="undefined", inline=False)
-        await message.send(embed=embed)
+    if message.content.startswith('em'):
+        embedVar = discord.Embed(title="Title", description="Desc", color=0x00ff00)
+        embedVar.add_field(name="Field1", value="hi", inline=False)
+        embedVar.add_field(name="Field2", value="hi2", inline=False)
+        await message.channel.send(embed=embedVar)
     
 try:
     client.run(TOKEN)
