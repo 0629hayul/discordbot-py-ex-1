@@ -34,7 +34,7 @@ async def on_message(message):
         embedVar.add_field(name="Field2", value="hi2", inline=False)
         await message.channel.send(embed=embedVar)
         
-    if (command === 'avatar') {
+    if message.content.startswith(f'{PREFIX}profile'):
 		if (args[0]) {
 			const user = getUserFromMention(args[0]);
 			if (!user) {
