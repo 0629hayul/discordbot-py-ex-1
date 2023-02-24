@@ -23,53 +23,23 @@ async def on_message(message):
     if message.content == f'call':
         await message.channel.send("callback!")
     
-    if message.content == f'test':
-        await message.channel.send('<#1077856697525219381>')
+    if message.content == f'{PREFIX}멤버등록':
+        await message.channel.send('<#1077925680903376896>')
+        
+    if message.content == f'{PREFIX}테스트':
+        await message.channel.send('<#1077860655073345536>')
 
-    if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('hello, {0.author.mention}!'.format(message))
+    if message.content.startswith(f'{PREFIX}ㅎㅇ'):
+        await message.channel.send('hi, {0.author.mention}!'.format(message))
 
     if message.content == f'{PREFIX}help':
         embedVar = discord.Embed(title="Telum_bot", color=0x3B3B3B)
         embedVar.add_field(name="*접두사 :ㅤ.",value="- help : telum 봇 명령어 확인", inline=False)
-        embedVar.add_field(name="",value="- hello : 인사", inline=False)
         embedVar.add_field(name="",value="- call : (접두사X)봇 확인", inline=False)
+        embedVar.add_field(name="",value="- ㅎㅇ : 인사", inline=False)
+        embedVar.add_field(name="",value="- 멤버등록 : teluny서버 멤버 등록", inline=False)
         await message.channel.send(embed=embedVar)
-        
-        newUserMessage = """
-You
-can
-put
-your
-multiline
-message
-here!
-"""
-
-@client.event
-async def on_member_join(member):
-    print("Recognised that a member called " + member.name + " joined")
-    try: 
-        await client.send_message(member, newUserMessage)
-        print("Sent message to " + member.name)
-    except:
-        print("Couldn't message " + member.name)
-    embed=discord.Embed(
-        title="Welcome "+member.name+"!"
-    )
-        
-    role = discord.utils.get(member.server.roles, name="name-of-your-role") #  Gets the member role as a `role` object
-    await client.add_roles(member, role) # Gives the role to the user
-    print("Added role '" + role.name + "' to " + member.name)
-
-@client.event
-async def on_member_leave(member):
-    print("Recognised that a member called " + member.name + " left")
-    embed=discord.Embed(
-        title="😢 Goodbye "+member.name+"!",
-        description="Until we meet again old friend."
-    )
-            
+  
 try:
     client.run(TOKEN)
 except discord.errors.LoginFailure as e:
