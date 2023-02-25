@@ -46,12 +46,12 @@ async def on_message(message):
         
     if message.content == f'{PREFIX}순위':
         embedVar = discord.Embed(title="역할 순위", color=0x0094ff)
-        embedVar.add_field(name="",value="[ teluny ]", inline=False)
-        embedVar.add_field(name="",value="[ telum ]", inline=False)
-        embedVar.add_field(name="",value="[ admin ]",inline=False)
-        embedVar.add_field(name="",value="[ VIP ]", inline=False)
-        embedVar.add_field(name="",value="[ buyer ]",  inline=False)
-        embedVar.add_field(name="",value="[ member ]",inline=False)
+        embedVar.add_field(name="",value="[ teluny ]ㅤ👑", inline=False)
+        embedVar.add_field(name="",value="[ telum ]ㅤ🔼", inline=False)
+        embedVar.add_field(name="",value="[ admin ]ㅤ🔼",inline=False)
+        embedVar.add_field(name="",value="[ VIP ]ㅤ🔼", inline=False)
+        embedVar.add_field(name="",value="[ buyer ]ㅤ🔼",  inline=False)
+        embedVar.add_field(name="",value="[ member ]ㅤ🔼",inline=False)
 
         await message.channel.send(embed=embedVar)     
       
