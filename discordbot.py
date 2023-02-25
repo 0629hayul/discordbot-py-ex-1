@@ -23,7 +23,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
     if message.content == f'{PREFIX}?':
-        await message.channel.send('<#1078986719556284446>을 참고해주세요. 질문 작성은 teluny DM 혹은 <#1078829814619840642>에서 부탁드립니다 :)')
+        await message.channel.send('<#1078986719556284446>을 참고해주세요.\n질문 작성은 teluny DM 혹은 <#1078829814619840642>에서 부탁드립니다 :)')
         
     if message.content == f'{PREFIX}초대이벤트':
         embedVar = discord.Embed(title="초대이벤트", color=0x0094ff)
