@@ -27,9 +27,9 @@ async def on_message(message):
         
     if message.content == f'{PREFIX}초대이벤트':
         embedVar = discord.Embed(title="초대이벤트", color=0x0094ff)
-        embedVar.add_field(name="초대 받아서 온 경우",value="- teluny DM에 초대해준사람 닉네임을 적어주시면 됩니다. 참고 - <#1078982517098561556>",inline=False)
-        embedVar.add_field(name="초대 이벤트 보상 지급관련",value="관리자가 확인 후 DM으로 보상을 지급해드립니다.",inline=False)
-        embedVar.add_field(name="초대 이벤트가 안뜨는경우",value="<#1077925680903376896>을 해주세요.",  inline=False)        
+        embedVar.add_field(name="`초대 받아서 온 경우`",value="- teluny DM에 초대해준사람 닉네임을 적어주시면 됩니다.\n참고 - <#1078982517098561556>",inline=False)
+        embedVar.add_field(name="`초대 이벤트 보상 지급관련`",value="관리자가 확인 후 DM으로 보상을 지급해드립니다.",inline=False)
+        embedVar.add_field(name="`초대 이벤트가 안뜨는경우`",value="<#1077925680903376896>을 해주세요.",  inline=False)        
         await message.channel.send(embed=embedVar)   
    
     if message.content == f'{PREFIX}등업':
