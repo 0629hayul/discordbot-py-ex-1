@@ -25,12 +25,12 @@ async def on_message(message):
     
     if message.content == f'{PREFIX}등업':
         embedVar = discord.Embed(title="등업 규칙", color=0x0094ff)
-        embedVar.add_field(name="",value="- 서버개설 : teluny", color=0xfdfd79, inline=False)
-        embedVar.add_field(name="",value="- 누적 50명 초대시 : telum", color=0xff00e6, inline=False)
-        embedVar.add_field(name="",value="- 누적 30명 초대시 : admin", color=0xff004d, inline=False)
-        embedVar.add_field(name="",value="- 5회 구매 : VIP", color=0x005fff, inline=False)
-        embedVar.add_field(name="",value="- 1회 구매 : buyer", color=0x00ff89, inline=False)
-        embedVar.add_field(name="",value="- 서버참여 : member", color=0x666666, inline=False)
+        embedVar.add_field(name="",value="- 서버개설 : teluny",inline=False)
+        embedVar.add_field(name="",value="- 누적 50명 초대시 : telum",inline=False)
+        embedVar.add_field(name="",value="- 누적 30명 초대시 : admin",  inline=False)
+        embedVar.add_field(name="",value="- 5회 구매 : VIP", inline=False)
+        embedVar.add_field(name="",value="- 1회 구매 : buyer", inline=False)
+        embedVar.add_field(name="",value="- 서버참여 : member", inline=False)
 
         await message.channel.send(embed=embedVar)
     
@@ -46,12 +46,12 @@ async def on_message(message):
         
     if message.content == f'{PREFIX}순위':
         embedVar = discord.Embed(title="역할 순위", color=0x0094ff)
-        embedVar.add_field(name="",value="[ teluny ]", color=0xfdfd79, inline=False)
-        embedVar.add_field(name="",value="[ telum ]", color=0xff00e6, inline=False)
-        embedVar.add_field(name="",value="[ admin ]", color=0xff004d, inline=False)
-        embedVar.add_field(name="",value="[ VIP ]", color=0x005fff, inline=False)
-        embedVar.add_field(name="",value="[ buyer ]", color=0x00ff89, inline=False)
-        embedVar.add_field(name="",value="[ member ]", color=0x666666, inline=False)
+        embedVar.add_field(name="",value="[ teluny ]", inline=False)
+        embedVar.add_field(name="",value="[ telum ]", inline=False)
+        embedVar.add_field(name="",value="[ admin ]",inline=False)
+        embedVar.add_field(name="",value="[ VIP ]", inline=False)
+        embedVar.add_field(name="",value="[ buyer ]",  inline=False)
+        embedVar.add_field(name="",value="[ member ]",inline=False)
 
         await message.channel.send(embed=embedVar)     
       
