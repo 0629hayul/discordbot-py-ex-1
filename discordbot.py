@@ -23,9 +23,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
    
-    if message.content == f'안녕하세요.':
-        await message.channel.send('안녕하세요, {0.author.mention}님! 서버에 처음 오셨다면 <#1077925680903376896>을 해주세요 :)')
-    
+   
     if message.content == f'{PREFIX}등업':
         embedVar = discord.Embed(title="등업 규칙", color=0x0094ff)
         embedVar.add_field(name="",value="- 서버개설 : teluny",inline=False)
