@@ -44,7 +44,7 @@ async def on_message(message):
         embedVar.add_field(name="구매 가능한 계정",value="- <#1078830041984684194>", inline=False)
         embedVar.add_field(name="",value="- <#1078830400304066640>", inline=False)
         embedVar.add_field(name="구매",value="<#1078960264059293696>를 참고해주세요", inline=False)
-        embedVar.add_field(name="무료 계정 이벤트",value="evt를 참고해주세요", inline=False)
+        embedVar.add_field(name="냥코&발로 계정 이벤트",value="evt를 참고해주세요", inline=False)
         embedVar.add_field(name="",value="기타 질문은 [teluny]유저 DM or <#1078829814619840642>에 문의주세요. 감사합니다 :)", inline=False)
 
         await message.channel.send(embed=embedVar)     
