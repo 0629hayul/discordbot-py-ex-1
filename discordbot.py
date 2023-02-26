@@ -25,12 +25,6 @@ async def on_message(message):
     if message.content == f'{PREFIX}?':
         await message.channel.send('<#1078986719556284446>을 참고해주세요.\n질문 작성은 teluny DM 혹은 <#1078829814619840642>에서 부탁드립니다 :)')
         
-    if message.content == f'{PREFIX}초대이벤트':
-        embedVar = discord.Embed(title="초대이벤트", color=0x0094ff)
-        embedVar.add_field(name="`초대 받아서 온 경우`",value="- teluny DM에 초대해준사람 닉네임을 적어주시면 됩니다.\n참고 - <#1078982517098561556>",inline=False)
-        embedVar.add_field(name="`초대 이벤트 보상 지급관련`",value="관리자가 확인 후 DM으로 보상을 지급해드립니다.",inline=False)
-        embedVar.add_field(name="`초대 이벤트가 안뜨는경우`",value="<#1077925680903376896>을 해주세요.",  inline=False)        
-        await message.channel.send(embed=embedVar)   
    
     if message.content == f'{PREFIX}등업':
         embedVar = discord.Embed(title="등업 규칙", color=0x0094ff)
@@ -77,15 +71,16 @@ async def on_message(message):
         embedVar.add_field(name="",value="- 순위 : 역할 순위", inline=False)
         embedVar.add_field(name="",value="- acc : 계정 구매 도움말", inline=False)
         embedVar.add_field(name="",value="- evt : 이벤트 일정", inline=False)
-        embedVar.add_field(name="",value="- 초대이벤트 : 초대 이벤트 도움말", inline=False)
-        embedVar.add_field(name="",value="- ? : 자주 묻는 질문", inline=False)
 
         await message.channel.send(embed=embedVar)
   
 
     if message.content == f'{PREFIX}evt':
         embedVar = discord.Embed(title="이벤트 일정", color=0x0094ff)
-        embedVar.add_field(name="",value="- 발로란트 무료 계정 이벤트(준비중) - <#1078846897445408839>", inline=False)
+        embedVar.add_field(name="",value="- 발로란트 계정 2+1 이벤트 - <#1078846897445408839>", inline=False)
+        embedVar.add_field(name="",value="- 냥코 계좌&문상 50% 할인 이벤트! - <#1078962629353148486>", inline=False)
+        embedVar.add_field(name="",value="- 초대 이벤트(최대 문상18,000원+냥&발로계정!) - <#1078982517098561556>", inline=False)
+        embedVar.add_field(name="",value="- 멤버이벤트 이벤트! 존버만타도 문상 최대 185,000원! - <#1079027442439692438>", inline=False)
 
         await message.channel.send(embed=embedVar)
 try:
