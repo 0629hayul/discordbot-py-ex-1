@@ -24,7 +24,7 @@ async def on_message(message):
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
         
     if message.content == f'{PREFIX}1':
-        await message.channel.send('2')
+        await message.channel.send('1')
         if message.content == f'{PREFIX}2':
             await message.channel.send('2')
         
