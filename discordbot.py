@@ -51,11 +51,13 @@ async def on_message(message):
             sleep(1)
             await message.channel.send('plyer : 2')
             
+            
+    async def button1_callback(interaction: Interaction):
+        await message.channel.send("1번")
+            
     if message.content == f'{PREFIX}시작':
         if message.author.id == 819436785998102548:
             await message.channel.send('랜덤숫자를 뽑는중입니다.')
-            sleep(3)
-            await message.channel.send('플레이어님은 1,2중에 하나를 선택해주세요.')
         else:
             await message.channel.send('관리자(<@819436785998102548>)가 시작해야합니다.')         
      
