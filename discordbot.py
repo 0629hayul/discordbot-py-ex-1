@@ -26,7 +26,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}1':
         await message.channel.send('2')
         if message.content == f'{PREFIX}2':
-        await message.channel.send('2')
+            await message.channel.send('2')
         
         
         
