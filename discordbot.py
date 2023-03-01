@@ -24,8 +24,8 @@ async def on_message(message):
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
         
     if message.content == f'{PREFIX}텟':
-        await message.channel.send(message.author.id)
-
+        if message.author.id == 819436785998102548:
+            await message.channel.send('teluny')
             
         
         
