@@ -29,18 +29,19 @@ async def on_message(message):
             await message.channel.send('게임 시작!')
             sleep(1)
             await message.channel.send('플레이어님은 1,2중에 하나를 선택해주세요.')
-            if message.content == f'{PREFIX}1':
-                if message.author.id == 819436785998102548:
-                    await message.channel.send('<@819436785998102548>님이 1을 선택했습니다.')
-                else:
-                    await message.channel.send('{message.author.mention}님이 1을 선택했습니다.')
-                if message.content == f'{PREFIX}2':
-                    if message.author.id == 819436785998102548:
-                        await message.channel.send('<@819436785998102548>님이 2을 선택했습니다.')
-                    else:
-                        await message.channel.send('{message.author.mention}님이 2을 선택했습니다.')
         else:
             await message.channel.send('관리자(<@819436785998102548>)가 게임을 시작해야합니다. 관리자를 호출해주세요.')
+    if message.content == f'{PREFIX}1':
+        if message.author.id == 819436785998102548:
+            await message.channel.send('<@819436785998102548>님이 1을 선택했습니다.')
+        else:
+            await message.channel.send('{message.author.mention}님이 1을 선택했습니다.')
+    if message.content == f'{PREFIX}2':
+        if message.author.id == 819436785998102548:
+            await message.channel.send('<@819436785998102548>님이 2을 선택했습니다.')
+        else:
+            await message.channel.send('{message.author.mention}님이 2을 선택했습니다.')
+        
             
         if message.content == f'{PREFIX}테스트':
             await message.channel.send('ready')
