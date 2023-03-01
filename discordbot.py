@@ -23,7 +23,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
     if message.content == f'{PREFIX}?':
-        await message.channel.send('<#1078986719556284446>을 참고해주세요.\n질문 작성은 teluny DM 혹은 <#1078829814619840642>에서 부탁드립니다 :)')
+        await message.channel.send('<#1078986719556284446>을 참고해주세요.\n질문은 <@819436785998102548> DM 혹은 <#1080448082526871564>에서 부탁드립니다 :)')
         
    
     if message.content == f'{PREFIX}등업':
@@ -45,9 +45,17 @@ async def on_message(message):
         embedVar.add_field(name="",value="- <#1078830400304066640>", inline=False)
         embedVar.add_field(name="구매",value="<#1078960264059293696>를 참고해주세요", inline=False)
         embedVar.add_field(name="냥코&발로 계정 이벤트",value="evt를 참고해주세요", inline=False)
-        embedVar.add_field(name="",value="기타 질문은 [teluny]유저 DM or <#1078829814619840642>에 문의주세요. 감사합니다 :)", inline=False)
+        embedVar.add_field(name="",value="기타 질문은 <@819436785998102548> DM or <#1080448082526871564>에 문의주세요. 감사합니다 :)", inline=False)
 
-        await message.channel.send(embed=embedVar)     
+        await message.channel.send(embed=embedVar)  
+        
+    if message.content == f'{PREFIX}tkt':
+        embedVar = discord.Embed(title="서버 티켓", color=0x0094ff)
+        embedVar.add_field(name="티켓 사용",value="- 티켓 사용 용도는 계정 구매/teluny쿠폰구매/teluny쿠폰환전/기타질문 용도로만 사용해주세요.", inline=False)
+        embedVar.add_field(name="주의점",value="티켓을 실수로 닫으면 재오픈/삭제가 가능합니다. \n재오픈 요청시 <#1078836298229502063>에서 <@819436785998102548>에게 재오픈 요청 혹은 DM으로 재오픈 요청을 해주세요.", inline=False)
+        embedVar.add_field(name="",value="기타 질문은 <@819436785998102548> DM or <#1080448082526871564>에 문의주세요. 감사합니다 :)", inline=False)
+
+        await message.channel.send(embed=embedVar)  
         
     if message.content == f'{PREFIX}순위':
         embedVar = discord.Embed(title="역할 순위", color=0x0094ff)
@@ -71,6 +79,7 @@ async def on_message(message):
         embedVar.add_field(name="",value="- 순위 : 역할 순위", inline=False)
         embedVar.add_field(name="",value="- acc : 계정 구매 도움말", inline=False)
         embedVar.add_field(name="",value="- evt : 이벤트 일정", inline=False)
+        embedVar.add_field(name="",value="- tkt : 티켓 사용 도움말", inline=False)
 
         await message.channel.send(embed=embedVar)
   
