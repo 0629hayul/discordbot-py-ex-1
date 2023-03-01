@@ -38,7 +38,7 @@ async def on_message(message):
                     if message.author.id == 819436785998102548:
                         await message.channel.send('<@819436785998102548>님이 2을 선택했습니다.')
                     else:
-                    await message.channel.send('{message.author.mention}님이 2을 선택했습니다.')
+                        await message.channel.send('{message.author.mention}님이 2을 선택했습니다.')
         else:
             await message.channel.send('관리자(<@819436785998102548>)가 게임을 시작해야합니다. 관리자를 호출해주세요.')
             
