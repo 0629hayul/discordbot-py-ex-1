@@ -22,6 +22,14 @@ async def on_message(message):
       
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
+        
+    if message.content == f'{PREFIX}1':
+        await message.channel.send('2')
+        if message.content == f'{PREFIX}2':
+        await message.channel.send('2')
+        
+        
+        
     if message.content == f'{PREFIX}?':
         await message.channel.send('<#1078986719556284446>을 참고해주세요.\n질문은 <@819436785998102548> DM 혹은 <#1080448082526871564>에서 부탁드립니다 :)')
         
