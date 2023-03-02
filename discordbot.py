@@ -20,10 +20,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    
-    
-  
-    
+
     if message.content == f'{PREFIX}btn':
         button1 = Button(label="버튼1", style=ButtonStyle.primary)
 
