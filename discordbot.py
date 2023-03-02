@@ -23,15 +23,15 @@ async def on_message(message):
     
     if message.content == f'{PREFIX}btn':
         computer = random.randint(1, 10)
-        await ctx.send('Guess my number')
+        await message.channel.send('Guess my number')
 
    
     msg = await client.wait_for("message", check=check)
 
     if int(msg.content) == computer:
-        await ctx.send("Correct")
+        await message.channel.send("Correct")
     else:
-        await ctx.send(f"Nope it was {computer}")
+        await message.channel.send(f"Nope it was {computer}")
 
       
     if message.content == f'{PREFIX}멤버등록':
