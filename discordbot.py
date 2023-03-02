@@ -24,8 +24,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}dm':
         await message.channel.send('입력하셈')
         message = await client.wait_for('message')
-        chanl = 1080458417006719016
-        await chanl.send('{message.content}')
+        await message.channel.send('{message.content}')
    
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
