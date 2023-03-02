@@ -26,7 +26,7 @@ async def on_message(message):
   
     
     if message.content == f'{PREFIX}btn':
-         button1 = Button(label="버튼1", style=ButtonStyle.primary)
+        button1 = Button(label="버튼1", style=ButtonStyle.primary)
 
         async def button1_callback(interaction: Interaction):
             await interaction.response.send_message("1번입니다.")
