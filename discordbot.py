@@ -24,12 +24,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
     
-    if message.content == f'{PREFIX}cid':
-        await message.channel.send('ㄱ')
-        message1 = await client.wait_for('message')
-        await message.channel.send('ㄱㄱ')
-        message2 = await client.wait_for('message')        
-        await client.send_message(discord.Object(id=message1.content), '결과 : {message2.content}'.format(message.author))   
+ 
         
     if message.content == f'{PREFIX}게임':
         if message.author.id == 819436785998102548:
@@ -59,7 +54,6 @@ async def on_message(message):
             await message.channel.send('plyer : 2')
             
             
-        await message.channel.send("1번")
             
     if message.content == f'{PREFIX}시작':
         if message.author.id == 819436785998102548:
