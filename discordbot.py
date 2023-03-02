@@ -22,6 +22,22 @@ async def on_message(message):
     if message.author == client.user:
         return
     
+    
+    if message.content == f'{PREFIX}in':
+        computer = random.randint(1, 10)
+        await ctx.send('Guess my number')
+
+    def check(msg):
+        return msg.author == ctx.author and msg.channel == ctx.channel and int(msg.content) in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        msg = await client.wait_for("message", check=check)
+
+    if int(msg.content) == computer:
+        await ctx.send("Correct")
+    else:
+        await ctx.send(f"Nope it was {computer}")
+
+    
     if message.content == f'{PREFIX}btn':
         await ctx.channel.send("Context",components=[Button(style=ButtonStyle.blue, label="Test")]) #Blue button with button label of "Test"
         res = await self.client.wait_for("button_click") #Wait for button to be clicked
