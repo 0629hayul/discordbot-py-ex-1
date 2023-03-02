@@ -29,7 +29,7 @@ async def on_message(message):
         message = await client.wait_for('message')
         await message.channel.send('ㄱㄱ')
         message2 = await client.wait_for('message')        
-        await client.send_message(discord.Object(id=message.content)'결과 : {message2.content}')   
+        await client.send_message(discord.Object(id=message.content), '결과 : {message2.content}')   
         
     if message.content == f'{PREFIX}게임':
         if message.author.id == 819436785998102548:
