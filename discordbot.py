@@ -27,10 +27,10 @@ async def on_message(message):
     if message.content == f'{PREFIX}cid':
         await message.channel.send('ㄱ')
         message = await client.wait_for('message')
-        channel = client.get_channel(message)
         await message.channel.send('ㄱㄱ')
-        message2 = await client.wait_for('message')
-        await channel.send('랜덤숫자 : {message2.content}')
+        message2 = await client.wait_for('message')        
+        channel1 = client.get_channel(message)
+        await channel1.send('랜덤숫자 : {message2.content}')
    
         
     if message.content == f'{PREFIX}게임':
