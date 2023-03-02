@@ -20,17 +20,12 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-
-    if message.content == f'{PREFIX}btn':
-        button1 = Button(label="버튼1", style=ButtonStyle.primary)
-
-        async def button1_callback(interaction: Interaction):
-            await interaction.response.send_message("1번입니다.")
-
-        button1.callback = button1_callback
-        view = View()
-        view.add_item(button1)
-        
+    
+    if message.content == f'{PREFIX}dm':
+        await message.channel.send('입력하셈')
+        message = await client.wait_for('message', check=check)
+        await 819436785998102548.send('{message.content}')
+   
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
         
@@ -62,7 +57,6 @@ async def on_message(message):
             await message.channel.send('plyer : 2')
             
             
-    async def button1_callback(interaction: Interaction):
         await message.channel.send("1번")
             
     if message.content == f'{PREFIX}시작':
