@@ -23,7 +23,7 @@ async def on_message(message):
     
     if message.content == f'{PREFIX}dm':
         await message.channel.send('입력하셈')
-        message = await client.wait_for('message', check=check)
+        message = await client.wait_for('message')
         chanl = 1080458417006719016
         await chanl.send('{message.content}')
    
