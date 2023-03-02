@@ -42,6 +42,9 @@ async def on_message(message):
             await message.channel.send('teluny : 2')
             sleep(1)
             await message.channel.send('plyer : 1')
+            sleep(1)
+            await message.channel.send('숫자를 정하셨으면 “시작”을 해주세요.')
+
     
     if message.content == f'{PREFIX}2':
         if message.author.id == 819436785998102548:
