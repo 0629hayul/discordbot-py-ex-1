@@ -22,9 +22,16 @@ async def on_message(message):
         return
     
     if message.content == f'{PREFIX}btn':
-        view = discord.ui.View()
-        button = discord.ui.Button(label="click me")
-        await message.channel.send(view=view)
+        computer = random.randint(1, 10)
+        await ctx.send('Guess my number')
+
+   
+    msg = await client.wait_for("message", check=check)
+
+    if int(msg.content) == computer:
+        await ctx.send("Correct")
+    else:
+        await ctx.send(f"Nope it was {computer}")
 
       
     if message.content == f'{PREFIX}멤버등록':
