@@ -1,6 +1,7 @@
 from cmath import log
 from distutils.sysconfig import PREFIX
 import discord
+from discord_components import DiscordComponents, Button, ButtonStyle, InteractionType
 from time import sleep
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -22,16 +23,9 @@ async def on_message(message):
         return
     
     if message.content == f'{PREFIX}btn':
-        computer = random.randint(1, 10)
-        await message.channel.send('Guess my number')
-
-   
-    msg = await client.wait_for("message", check=check)
-
-    if int(msg.content) == computer:
-        await message.channel.send("Correct")
-    else:
-        await message.channel.send(f"Nope it was {computer}")
+        await ctx.channel.send("Context",components=[Button(style=ButtonStyle.blue, label="Test")]) #Blue button with button label of "Test"
+        res = await self.client.wait_for("button_click") #Wait for button to be clicked
+        await message.channel.send(type=InteractionType.ChannelMessageWithSource, content=f'Button Clicked')
 
       
     if message.content == f'{PREFIX}멤버등록':
