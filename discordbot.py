@@ -20,7 +20,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-     if message.content == f'{PREFIX}멤버등록':
+    
+    if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
     
     if message.content == f'{PREFIX}cid':
