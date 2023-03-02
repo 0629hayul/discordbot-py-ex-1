@@ -28,7 +28,7 @@ async def on_message(message):
         await message.channel.send('ㄱㄱ')
         message = await client.wait_for('message')
         channel = client.get_channel(message.content)
-        await channel.send(message.content)
+        await channel.send('{message.content}')
    
         
     if message.content == f'{PREFIX}게임':
