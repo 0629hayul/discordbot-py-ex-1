@@ -25,11 +25,12 @@ async def on_message(message):
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
     
     if message.content == f'{PREFIX}cid':
-        await message.channel.send('ㄱㄱ')
+        await message.channel.send('ㄱ')
         message = await client.wait_for('message')
         channel = client.get_channel(message.content)
-        chtr = repr(channel)
-        await channel.send('<#{chtr}>')
+        await message.channel.send('ㄱㄱ')
+        message2 = await client.wait_for('message')
+        await channel.send('랜덤숫자 : {message2.content}')
    
         
     if message.content == f'{PREFIX}게임':
