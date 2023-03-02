@@ -28,8 +28,7 @@ async def on_message(message):
 
     def check(msg):
         return msg.author == ctx.author and msg.channel == ctx.channel and int(msg.content) in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-            msg = await client.wait_for("message", check=check)
+    msg = await client.wait_for("message", check=check)
 
     if int(msg.content) == computer:
         await ctx.send("Correct")
