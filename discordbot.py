@@ -22,7 +22,6 @@ async def on_message(message):
         return
     
     
-    if message.content == f'{PREFIX}in':
   
     
     if message.content == f'{PREFIX}btn':
