@@ -24,7 +24,7 @@ async def on_message(message):
     if message.content == f'{PREFIX}dm':
         await message.channel.send('입력하셈')
         message = await client.wait_for('message')
-        channel = bot.get_channel(1080820800149524530)
+        channel = client.get_channel(1080820800149524530)
         await channel.send(message.content)
    
     if message.content == f'{PREFIX}멤버등록':
