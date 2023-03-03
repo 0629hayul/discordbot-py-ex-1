@@ -26,7 +26,6 @@ async def on_message(message):
     
     if message.content == f'{PREFIX}TBR':
         if message.author.id == 819436785998102548:
-            betlv;
             betlv = 100;
             await message.channel.send('BL : lv.{betlv}')
         else:
