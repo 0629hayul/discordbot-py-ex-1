@@ -29,7 +29,6 @@ async def on_message(message):
             betlv = 100;
             await message.channel.send('BL : lv.{betlv}')
         else:
-            betlv;
             if(betlv is None):
                 betlv = 1;
                 await message.channel.send('BL : lv.{betlv}')
