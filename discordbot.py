@@ -28,7 +28,7 @@ async def on_message(message):
         global betlv;
         if message.author.id == 819436785998102548:
             betlv = 100;
-            await message.channel.send('BL : lv.{betlv}')
+            await message.channel.send('BL : lv.',betlv)
         else:
             if(betlv is None):
                 betlv = 1;
