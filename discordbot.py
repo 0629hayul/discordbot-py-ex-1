@@ -32,9 +32,9 @@ async def on_message(message):
         else:
             if(betlv is None):
                 betlv = 1;
-                await message.channel.send('BL : lv.{betlv}')
+                await message.channel.send('BL : lv.',betlv)
             else:
-                await message.channel.send('BL : lv.{betlv}')
+                await message.channel.send('BL : lv.',betlv)
 
     if message.content == f'{PREFIX}게임':
         if message.author.id == 819436785998102548:
