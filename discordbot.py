@@ -24,8 +24,19 @@ async def on_message(message):
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
     
- 
-        
+    if message.content == f'{PREFIX}TBR':
+        if message.author.id == 819436785998102548:
+            betlv;
+            betlv = 100;
+            await message.channel.send('BL : lv.{betlv}')
+        else:
+            betlv;
+            if(betlv is None):
+                betlv = 1;
+                await message.channel.send('BL : lv.{betlv}')
+            else:
+                await message.channel.send('BL : lv.{betlv}')
+
     if message.content == f'{PREFIX}게임':
         if message.author.id == 819436785998102548:
             await message.channel.send('게임 시작!')
