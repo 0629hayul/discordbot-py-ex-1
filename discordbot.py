@@ -25,7 +25,8 @@ async def on_message(message):
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
    
     if message.content == f'{PREFIX}tb':
-        await message.channel.send('<@819436785998102548> 잠시만 기다려주세요 {message.author}님, 대기열 확인 후 게임시작합니다.')
+        mention = message.author.mention
+        await message.channel.send('<@819436785998102548> 잠시만 기다려주세요 {mention}님, 대기열 확인 후 게임시작합니다.')
   
 
     if message.content == f'{PREFIX}게임':
