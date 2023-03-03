@@ -26,7 +26,7 @@ async def on_message(message):
    
     if message.content == f'{PREFIX}tb':
         a = 1;
-        await message.channel.send('<@819436785998102548> 잠시만 기다려주세요 {a} 님, 대기열 확인 후 게임시작합니다.')
+        await message.channel.send('<@819436785998102548> 잠시만 기다려주세요. 대기열 확인 후 게임시작합니다.')
   
 
     if message.content == f'{PREFIX}게임':
