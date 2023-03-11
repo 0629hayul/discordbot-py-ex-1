@@ -468,7 +468,7 @@ async def on_message(message):
             await message.channel.send('숫자를 정하셨으면 “시작”을 해주세요.')
             
     if message.content == f'{PREFIX}gen':
-        await message.channel.send(random.choice(VGEN))         
+        await message.author.send(random.choice(VGEN))         
 
     if message.content == f'{PREFIX}시작':
         if message.author.id == 819436785998102548:
