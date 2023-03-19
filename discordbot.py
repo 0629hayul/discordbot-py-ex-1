@@ -12,7 +12,7 @@ load_dotenv()
 
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
-AUTH_KEY = "test_ck_N5OWRapdA8dzepXORYRVo1zEqZKL"
+AUTH_KEY = "test_sk_MGjLJoQ1aVZYe46dDlg3w6KYe2RN"
 
 client = discord.Client()
 
