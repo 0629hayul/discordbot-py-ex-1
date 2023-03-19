@@ -6,10 +6,13 @@ from time import sleep
 from dotenv import load_dotenv
 from discord.ext import commands
 import os
+import requests
+import time
 load_dotenv()
 
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
+AUTH_KEY = "test_ck_N5OWRapdA8dzepXORYRVo1zEqZKL"
 
 client = discord.Client()
 
@@ -21,7 +24,59 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    
+    if message.content.startswith('!입금'):
+        await message.channel.send("입금할 예금주명을 입력하세요.")
+        
+        def check_author(m):
+            return m.author == message.author and m.channel == message.channel
+        
+        author_name = await client.wait_for('message', check=check_author)
+        author_name = author_name.content
+        
+        await message.channel.send("입금할 금액을 입력하세요.")
+        amount = await client.wait_for('message', check=check_author)
+        amount = int(amount.content)
+        
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {AUTH_KEY}"
+        }
+        
+        payload = {
+            "bank_name": "토스뱅크",
+            "bank_account_num": "1908-8896-4321",
+            "amount": amount,
+            "account_holder_name": author_name
+        }
+        
+        response = requests.post("https://api.tosspayments.com/v1/payments/deposits",
+                                 headers=headers, json=payload)
+        response_data = response.json()
+        
+        if response_data.get('code') == 0:
+            tx_id = response_data.get('result').get('tx_id')
+            await message.channel.send(f"입금확인 중입니다. (tx_id: {tx_id})")
+            
+            # 2분간 입금 확인 대기
+            start_time = time.time()
+            while True:
+                response = requests.get(f"https://api.tosspayments.com/v1/payments/deposits/{tx_id}",
+                                        headers=headers)
+                response_data = response.json()
+                if response_data.get('code') == 0:
+                    status = response_data.get('result').get('status')
+                    if status == 'CONFIRMED':
+                        await message.channel.send("입금이 확인되었습니다.")
+                        break
+                    elif time.time() - start_time > 120:
+                        await message.channel.send("타임아웃")
+                        break
+                else:
+                    await message.channel.send("입금확인 중 오류가 발생했습니다.")
+                    break
+        else:
+            await message.channel.send("입금 요청 중 오류가 발생했습니다.")
+##########################################################################################################################################            
     if message.content == f'{PREFIX}멤버등록':
         await message.channel.send('멤버등록은 <#1077925680903376896>을 참고해주세요!')
    
